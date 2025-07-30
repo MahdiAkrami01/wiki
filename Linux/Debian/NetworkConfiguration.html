@@ -2,7 +2,7 @@
 title: Network Configuration
 description: install network-manager on debain
 published: true
-date: 2025-07-30T09:03:00.929Z
+date: 2025-07-30T11:30:36.132Z
 tags: debian, linux, network
 editor: ckeditor
 dateCreated: 2025-07-30T00:12:06.543Z
@@ -25,10 +25,14 @@ echo "network: {config: disabled}" | tee /etc/cloud/cloud.cfg.d/99-disable-netwo
 systemctl enable NetworkManager
 systemctl status NetworkManager</code></pre>
 <h2>6. Disable ifupdown</h2>
+<blockquote>
+  <p>Executing this command may disconnect your internet. If you're using a VPS, ensure you have VNC access or another way to reconnect before proceeding, as you might lose access to your server. Double-check to avoid getting locked out!</p>
+</blockquote>
 <pre><code class="language-plaintext">systemctl stop networking
 systemctl disable networking</code></pre>
 <h2>7. Remove ifupdown and Clean Up (optional)</h2>
 <pre><code class="language-plaintext">apt purge ifupdown -y</code></pre>
 <h2>8. Configure Network with nmtui</h2>
 <pre><code class="language-plaintext">nmtui</code></pre>
+<p>&nbsp;</p>
 <figure class="image"><img src="/nmtui.png"></figure>
