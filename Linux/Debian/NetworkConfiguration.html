@@ -1,0 +1,36 @@
+<!--
+title: Network Configuration
+description: install network-manager on debain
+published: true
+date: 2025-07-30T08:25:21.544Z
+tags: network, debian, linux
+editor: ckeditor
+dateCreated: 2025-07-30T00:12:06.543Z
+-->
+
+<h2>1. Back up your current /etc/network/interfaces file</h2>
+<pre><code class="language-plaintext">cp /etc/network/interfaces /etc/network/interfaces.bak</code></pre>
+<h2>2. Clear the main network configuration</h2>
+<pre><code class="language-plaintext">cat &lt;&lt; "EOF" &gt; /etc/network/interfaces
+auto lo
+iface lo inet loopback
+EOF</code></pre>
+<h2>3. Disable cloud-init's Network Management (optional)</h2>
+<pre><code class="language-plaintext">mkdir -p /etc/cloud/cloud.cfg.d/
+echo "network: {config: disabled}" | tee /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg</code></pre>
+<h2>4. Install NetworkManager and nmtui</h2>
+<pre><code class="language-plaintext">apt update &amp;&amp; apt install network-manager -y</code></pre>
+<h2>5. Enable and Start NetworkManager</h2>
+<pre><code class="language-plaintext">systemctl start NetworkManager
+systemctl enable NetworkManager
+systemctl status NetworkManager</code></pre>
+<h2>6. Disable ifupdown</h2>
+<pre><code class="language-plaintext">systemctl stop networking
+systemctl disable networking</code></pre>
+<h2>7. Remove ifupdown and Clean Up (optional)</h2>
+<pre><code class="language-plaintext">apt purge ifupdown -y</code></pre>
+<h2>8. Configure Network with nmtui</h2>
+<pre><code class="language-plaintext">nmtui</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
