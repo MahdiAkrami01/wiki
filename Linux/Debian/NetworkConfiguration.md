@@ -1,8 +1,8 @@
 ---
 title: Network Configuration
-description: install network-manager on debain
+description: Install Network-Manager and nmtui on Debian
 published: true
-date: 2025-07-30T19:27:15.405Z
+date: 2025-07-30T19:29:02.867Z
 tags: debian, linux, network
 editor: markdown
 dateCreated: 2025-07-30T00:12:06.543Z
