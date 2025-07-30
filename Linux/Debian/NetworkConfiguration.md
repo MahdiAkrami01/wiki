@@ -2,7 +2,7 @@
 title: Network Configuration
 description: Install Network-Manager and nmtui on Debian
 published: true
-date: 2025-07-30T19:29:02.867Z
+date: 2025-07-30T19:30:22.702Z
 tags: debian, linux, network
 editor: markdown
 dateCreated: 2025-07-30T00:12:06.543Z
@@ -10,7 +10,7 @@ dateCreated: 2025-07-30T00:12:06.543Z
 
 # Install Network-Manager and nmtui on Debian
 Simple guide to install Network-Manager and nmtui on Debian for easy network configuration. Manage Wi-Fi, Ethernet, and VPN connections effortlessly with this step-by-step tutorial.
-## 1. Back up your current /etc/network/interfaces file
+## 1. Back up your current `/etc/network/interfaces` file
 
 ```plaintext
 cp /etc/network/interfaces /etc/network/interfaces.bak
