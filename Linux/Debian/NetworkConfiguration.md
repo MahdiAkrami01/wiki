@@ -2,7 +2,7 @@
 title: Network Configuration
 description: Install Network-Manager and nmtui on Debian
 published: true
-date: 2025-07-30T19:30:22.702Z
+date: 2025-07-30T19:35:34.226Z
 tags: debian, linux, network
 editor: markdown
 dateCreated: 2025-07-30T00:12:06.543Z
@@ -68,4 +68,4 @@ apt purge ifupdown -y
 nmtui
 ```
 
-![](/nmtui.png)
+![nmtui.png](/nmtui.png)
